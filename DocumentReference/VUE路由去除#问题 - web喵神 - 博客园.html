@@ -1,0 +1,1081 @@
+<!DOCTYPE html>
+<!-- saved from url=(0049)https://www.cnblogs.com/libo0125ok/p/9593741.html -->
+<html lang="zh-cn" data-blockbyte-bs-uid="41480"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="origin">
+    <meta property="og:description" content="最近自己在写一个vue的小型管理系统，在浏览器中看到的路由都是带有#的，很是不好看。为了解决此问题，大家一般都会想到：mode: &#39;history&#39;。可是在开发阶段没有问题，但是一旦build打包后，">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <title>VUE路由去除#问题 - web喵神 - 博客园</title>
+    
+    <link rel="stylesheet" href="./VUE路由去除#问题 - web喵神 - 博客园_files/blog-common.min.css">
+    <link id="MainCss" rel="stylesheet" href="./VUE路由去除#问题 - web喵神 - 博客园_files/bundle-red_autumnal_leaves.min.css">
+    
+    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="./VUE路由去除#问题 - web喵神 - 博客园_files/bundle-red_autumnal_leaves-mobile.min.css">
+    
+    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/libo0125ok/rss">
+    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/libo0125ok/rsd.xml">
+    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/libo0125ok/wlwmanifest.xml">
+    <script src="./VUE路由去除#问题 - web喵神 - 博客园_files/amp4ads-host-v0.js.下载"></script><script src="./VUE路由去除#问题 - web喵神 - 博客园_files/pubads_impl_rendering_2019102401.js.下载"></script><script async="" src="./VUE路由去除#问题 - web喵神 - 博客园_files/analytics.js.下载"></script><script type="text/javascript" src="./VUE路由去除#问题 - web喵神 - 博客园_files/encoder.js.下载"></script><script src="./VUE路由去除#问题 - web喵神 - 博客园_files/jquery-2.2.0.min.js.下载"></script>
+    <script src="./VUE路由去除#问题 - web喵神 - 博客园_files/blog-common.min.js.下载"></script>
+    <script>
+        var currentBlogId = 312812;
+        var currentBlogApp = 'libo0125ok';
+        var cb_enable_mathjax = false;
+        var isLogined = false;
+    </script>
+    
+    
+    
+<link rel="preload" href="./VUE路由去除#问题 - web喵神 - 博客园_files/f.txt" as="script"><script type="text/javascript" src="./VUE路由去除#问题 - web喵神 - 博客园_files/f.txt"></script><script src="./VUE路由去除#问题 - web喵神 - 博客园_files/pubads_impl_2019102401.js.下载" async=""></script><link rel="prefetch" href="https://tpc.googlesyndication.com/safeframe/1-0-36/html/container.html"><style class="blockbyte-bs-style" data-name="content">body>div#blockbyte-bs-indicator>div{opacity:0;pointer-events:none}body>iframe#blockbyte-bs-sidebar.blockbyte-bs-visible,body>iframe#blockbyte-bs-overlay.blockbyte-bs-visible{opacity:1;pointer-events:auto}body.blockbyte-bs-noscroll{overflow:hidden !important}body>div#blockbyte-bs-indicator>div{position:absolute;transform:translate3d(-40px, 0, 0);top:0;left:0;width:40px !important;height:100%;background:rgba(0,0,0,0.5);border-radius:0 10px 10px 0;transition:opacity 0.3s, transform 0.3s;z-index:2}body>div#blockbyte-bs-indicator>div>span{-webkit-mask:no-repeat center/32px;-webkit-mask-image:url(chrome-extension://jdbnofccmhefkmjbkkdkfiicjkgofkdh/img/icon-bookmark.svg);background-color:#ffffff;position:absolute;display:block;top:0;left:0;width:100%;height:100%}body>div#blockbyte-bs-indicator[data-pos='right']{left:auto;right:0}body>div#blockbyte-bs-indicator[data-pos='right']>div{transform:translate3d(40px, 0, 0);left:auto;right:0;border-radius:10px 0 0 10px}body>div#blockbyte-bs-indicator.blockbyte-bs-fullHeight>div{border-radius:0}body>div#blockbyte-bs-indicator.blockbyte-bs-hover>div{transform:translate3d(0, 0, 0);opacity:1}body>div#blockbyte-bs-indicator[data-pos='left'].blockbyte-bs-has-lsb{height:100% !important;top:0 !important}body>div#blockbyte-bs-indicator[data-pos='left'].blockbyte-bs-has-lsb>div{background:transparent}body>div#blockbyte-bs-indicator[data-pos='left'].blockbyte-bs-has-lsb>div>span{-webkit-mask-position-y:20px}body>iframe#blockbyte-bs-sidebar{width:350px;max-width:none;height:0;z-index:2147483646;background-color:rgba(0,0,0,0.6) !important;border:none;display:block !important;transform:translate3d(-350px, 0, 0);transition:width 0s 0.3s, height 0s 0.3s, opacity 0.3s, transform 0.3s}body>iframe#blockbyte-bs-sidebar[data-pos='right']{left:auto;right:0;transform:translate3d(350px, 0, 0)}body>iframe#blockbyte-bs-sidebar.blockbyte-bs-visible{width:calc(100% + 350px);height:100%;transform:translate3d(0, 0, 0);transition:opacity 0.3s, transform 0.3s}body>iframe#blockbyte-bs-sidebar.blockbyte-bs-hideMask{background:none !important}body>iframe#blockbyte-bs-sidebar.blockbyte-bs-hideMask:not(.blockbyte-bs-hover){width:calc(350px + 50px)}body>iframe#blockbyte-bs-overlay{width:100%;max-width:none;height:100%;z-index:2147483647;border:none;background:rgba(0,0,0,0.5) !important;transition:opacity 0.3s}
+</style></head>
+<body>
+    <a name="top"></a>
+    
+    
+<!--done-->
+<div id="home">
+<div id="header">
+	<div id="blogTitle">
+        <a id="lnkBlogLogo" href="https://www.cnblogs.com/libo0125ok/"><img id="blogLogo" src="./VUE路由去除#问题 - web喵神 - 博客园_files/logo.gif" alt="返回主页"></a>		
+		
+<!--done-->
+<h1><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/libo0125ok/">web喵神的博客</a>
+</h1>
+<h2>
+
+</h2>
+
+
+
+
+		
+	</div><!--end: blogTitle 博客的标题和副标题 -->
+	<div id="navigator">
+		
+<ul id="navList">
+<li><a id="blog_nav_sitehome" class="menu" href="https://www.cnblogs.com/">
+博客园</a>
+</li>
+<li>
+<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/libo0125ok/">
+首页</a>
+</li>
+<li>
+
+<a id="blog_nav_newpost" class="menu" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">
+新随笔</a>
+</li>
+<li>
+<a id="blog_nav_contact" class="menu" href="https://msg.cnblogs.com/send/web%E5%96%B5%E7%A5%9E">
+联系</a></li>
+<li>
+<a id="blog_nav_rss" class="menu" href="https://www.cnblogs.com/libo0125ok/rss/">
+订阅</a>
+<!--<partial name="./Shared/_XmlLink.cshtml" model="Model" /></li>--></li>
+<li>
+<a id="blog_nav_admin" class="menu" href="https://i.cnblogs.com/">
+管理</a>
+</li>
+</ul>
+
+
+		<div class="blogStats">
+			
+			<span id="stats_post_count">随笔 - 
+53&nbsp; </span>
+<span id="stats_article_count">文章 - 
+0&nbsp; </span>
+<span id="stats-comment_count">评论 - 
+112</span>
+
+			
+		</div><!--end: blogStats -->
+	</div><!--end: navigator 博客导航栏 -->
+</div><!--end: header 头部 -->
+
+<div id="main">
+	<div id="mainContent">
+	<div class="forFlow">
+		<div id="post_detail">
+    <!--done-->
+    <div id="topics">
+        <div class="post">
+            <h1 class="postTitle">
+                
+<a id="cb_post_title_url" class="postTitle2" href="https://www.cnblogs.com/libo0125ok/p/9593741.html">VUE路由去除#问题</a>
+
+            </h1>
+            <div class="clear"></div>
+            <div class="postBody">
+                
+<div id="cnblogs_post_body" class="blogpost-body ">
+    <p>最近自己在写一个vue的小型管理系统，在浏览器中看到的路由都是带有#的，很是不好看。为了解决此问题，大家一般都会想到：mode: 'history'。可是在开发阶段没有问题，但是一旦build打包后，访问并刷新浏览器后，页面就会报404的错误，为了解决打包后刷新浏览器报404的问题，如果使用nginx的话，还需要做如下配置。下面贴出完整的解决方案。</p>
+<h2>1、路由代码中添加mode：'history'</h2>
+<p>在new Router()的下一行添加上：<span style="color: #000000;">mode: 'history',</span></p>
+<div class="cnblogs_code"><div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./VUE路由去除#问题 - web喵神 - 博客园_files/copycode.gif" alt="复制代码"></a></span></div>
+<pre>import Vue from 'vue'<span style="color: #000000;">
+import Router from </span>'vue-router'<span style="color: #000000;">
+import Utils from </span>'@/js/utils.js'<span style="color: #000000;">
+import Login from </span>'@/components/Login'<span style="color: #000000;">
+import PerInfo from </span>'@/components/perInfo/perInfo'<span style="color: #000000;">
+import Home from </span>'@/components/Home'<span style="color: #000000;">
+import Dashboard from </span>'@/components/Dashboard'<span style="color: #000000;">
+import UserList from </span>'@/components/user/userList'<span style="color: #000000;">
+import UserAdd from </span>'@/components/user/userAdd'<span style="color: #000000;">
+
+Vue.use(Router)
+
+const router </span>= <span style="color: #0000ff;">new</span><span style="color: #000000;"> Router({
+  mode: </span>'history',  <span style="color: #008000;">//</span><span style="color: #008000;">去掉url中的#</span>
+<span style="color: #000000;">  routes: [
+    {
+      path: </span>'/'<span style="color: #000000;">,
+      name: </span>'home'<span style="color: #000000;">,
+      component: Home,
+      redirect: </span>'/login'<span style="color: #000000;">,
+      </span><span style="color: #008000;">//</span><span style="color: #008000;"> iconCls: 'iconfont icon-home',  //图标样式class</span>
+<span style="color: #000000;">      children: [
+        {path: </span>'/home', component: Dashboard, name: '首页'<span style="color: #000000;">}
+      ]
+    },
+    {
+      path: </span>'/login'<span style="color: #000000;">,
+      name: </span>'登录'<span style="color: #000000;">,
+      component: Login
+    },
+    {
+      path: </span>'/home'<span style="color: #000000;">,
+      name: </span>'仪表盘'<span style="color: #000000;">,
+      component: Dashboard
+    },
+    {
+      path: </span>'/user'<span style="color: #000000;">,
+      component: Home,
+      name: </span>'用户管理'<span style="color: #000000;">,
+      children: [
+        {path: </span>'/user/list', component: UserList, name: '用户列表'<span style="color: #000000;">},
+        {path: </span>'/user/add', component: UserAdd, name: '添加用户'<span style="color: #000000;">}
+      ]
+    },
+    {
+      path: </span>'/'<span style="color: #000000;">,
+      component: Home,
+      name: </span>'系统设置'<span style="color: #000000;">,
+      children:[
+        {path: </span>'/setting/perInfo', component: PerInfo, name: '个人信息'<span style="color: #000000;">}
+      ]
+    }
+  ]
+})
+
+router.beforeEach((to, from, next) </span>=&gt;<span style="color: #000000;"> {
+  console.log(</span>'开始页面切换'<span style="color: #000000;">);
+  console.log(to.fullPath)
+  </span><span style="color: #0000ff;">var</span> tempId = Utils.getCookie('temp-id'<span style="color: #000000;">);
+  </span><span style="color: #0000ff;">var</span> userInfo = sessionStorage.getItem('ssm_u_info'<span style="color: #000000;">);
+  </span><span style="color: #0000ff;">if</span>(to.fullPath != '/login' &amp;&amp; (tempId == <span style="color: #0000ff;">null</span> || tempId == '' || userInfo == <span style="color: #0000ff;">null</span> || userInfo == ''<span style="color: #000000;">)){
+    window.location.href </span>= '/login'<span style="color: #000000;">;
+  }
+  next();
+});
+
+export </span><span style="color: #0000ff;">default</span> router</pre>
+<div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./VUE路由去除#问题 - web喵神 - 博客园_files/copycode.gif" alt="复制代码"></a></span></div></div>
+<h2>2、nginx配置</h2>
+<h3>2.1、在nginx目录下新建 vhosts目录</h3>
+<p><img src="./VUE路由去除#问题 - web喵神 - 博客园_files/1048036-20180905180017563-453332025.jpg" alt="" width="538" height="344"></p>
+<h3>2.2、在vhosts目录下新建my-vue.conf配置文件</h3>
+<p><img src="./VUE路由去除#问题 - web喵神 - 博客园_files/1048036-20180905180225752-705805643.jpg" alt="" width="567" height="199"></p>
+<h3>2.3、在nginx的配置文件my-vue.conf中添加：try_files $uri $uri/ /index.html;</h3>
+<p>my-vue.conf文件内容：</p>
+<div class="cnblogs_code"><div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./VUE路由去除#问题 - web喵神 - 博客园_files/copycode.gif" alt="复制代码"></a></span></div>
+<pre><span style="color: #000000;">server {
+    listen </span>80<span style="color: #000000;">;
+    server_name my.vue.com;
+
+    charset utf</span>-8<span style="color: #000000;">;
+
+    location </span>/<span style="color: #000000;"> {
+        root </span>/Users/libo/Documents/workspace/Vue-me/my-project/dist;
+<span style="color: #000000;">        index index.html index.htm index.php;
+        try_files $uri $uri</span>/ /index.html;
+<span style="color: #000000;">    }
+    
+    location </span>^~ /ssm_project/<span style="color: #000000;"> {
+        proxy_pass http:</span><span style="color: #008000;">//</span><span style="color: #008000;">127.0.0.1:8081;</span>
+        proxy_cookie_path /127.0.0.1:8081/ /;
+         proxy_pass_header Set-<span style="color: #000000;">Cookie;
+        proxy_set_header Host </span>127.0.0.1:8081<span style="color: #000000;">;
+    }</span><span style="color: #000000;">
+}</span></pre>
+<div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./VUE路由去除#问题 - web喵神 - 博客园_files/copycode.gif" alt="复制代码"></a></span></div></div>
+<h3>&nbsp;2.4、在nginx目录下的nginx.conf http下的最后添加如下代码</h3>
+<p><img src="./VUE路由去除#问题 - web喵神 - 博客园_files/1048036-20180905180639426-1272683997.jpg" alt="" width="554" height="311"></p>
+<p>&nbsp;</p>
+<p><img src="./VUE路由去除#问题 - web喵神 - 博客园_files/1048036-20180905180543407-1899009545.jpg" alt="" width="525" height="233"></p>
+<h3>&nbsp;2.5、配置hosts文件</h3>
+<p>在/private/etc下的hosts文件添加如下内容:</p>
+<p>&nbsp;&nbsp; 127.0.0.1&nbsp;&nbsp; my.vue.com</p>
+<p><img src="./VUE路由去除#问题 - web喵神 - 博客园_files/1048036-20180905181331050-707120557.jpg" alt="" width="449" height="159"></p>
+<h2>3、访问效果</h2>
+<p>在命令行执行sudo nginx命令，以启动nginx服务，即可访问，在浏览器中输入my.vue.com，回车后页面如下</p>
+<p><img src="./VUE路由去除#问题 - web喵神 - 博客园_files/1048036-20180905181800493-514902295.jpg" alt="" width="801" height="362"></p>
+<p>登录系统，点击用户列表菜单：</p>
+<p><img src="./VUE路由去除#问题 - web喵神 - 博客园_files/1048036-20180905182226533-1986985849.jpg" alt="" width="1054" height="561"></p>
+<p>此时此刻，无论当前路由显示的是在登录页还是其他页面，再刷新浏览器，页面也不会报404了，大功告成！</p>
+<p>&nbsp;</p>
+<p><span style="background-color: #ff0000;">需要购买阿里云产品的，可以点击此链接领取红包，优惠购买哦，<span style="color: #ffffff;"><span>领取后一个月内有效</span></span></span>： <a href="https://promotion.aliyun.com/ntms/yunparter/invite.html?userCode=fp9ccf07" target="_blank">https://promotion.aliyun.com/ntms/yunparter/invite.html?userCode=fp9ccf07</a></p>
+</div>
+<div id="MySignature"></div>
+<div class="clear"></div>
+<div id="blog_post_info_block">
+<div id="EntryTag">
+    标签: 
+            <a href="https://www.cnblogs.com/libo0125ok/tag/web%E5%89%8D%E7%AB%AF/">web前端</a>,             <a href="https://www.cnblogs.com/libo0125ok/tag/JavaScript/">JavaScript</a>,             <a href="https://www.cnblogs.com/libo0125ok/tag/Vue/">Vue</a></div>
+
+    <div id="blog_post_info">
+<div id="green_channel">
+        <a href="javascript:void(0);" id="green_channel_digg" onclick="DiggIt(9593741,cb_blogId,1);green_channel_success(this,&#39;谢谢推荐！&#39;);">好文要顶</a>
+        <a id="green_channel_follow" onclick="follow(&#39;18474d67-c698-e611-845c-ac853d9f53ac&#39;);" href="javascript:void(0);">关注我</a>
+    <a id="green_channel_favorite" onclick="AddToWz(cb_entryId);return false;" href="javascript:void(0);">收藏该文</a>
+    <a id="green_channel_weibo" href="javascript:void(0);" title="分享至新浪微博" onclick="ShareToTsina()"><img src="./VUE路由去除#问题 - web喵神 - 博客园_files/icon_weibo_24.png" alt=""></a>
+    <a id="green_channel_wechat" href="javascript:void(0);" title="分享至微信" onclick="shareOnWechat()"><img src="./VUE路由去除#问题 - web喵神 - 博客园_files/wechat.png" alt=""></a>
+</div>
+<div id="author_profile">
+    <div id="author_profile_info" class="author_profile_info">
+            <a href="https://home.cnblogs.com/u/libo0125ok/" target="_blank"><img src="./VUE路由去除#问题 - web喵神 - 博客园_files/20171214154718.png" class="author_avatar" alt=""></a>
+        <div id="author_profile_detail" class="author_profile_info">
+            <a href="https://home.cnblogs.com/u/libo0125ok/">web喵神</a><br>
+            <a href="https://home.cnblogs.com/u/libo0125ok/followees/">关注 - 11</a><br>
+            <a href="https://home.cnblogs.com/u/libo0125ok/followers/">粉丝 - 64</a>
+        </div>
+    </div>
+    <div class="clear"></div>
+    <div id="author_profile_honor"></div>
+    <div id="author_profile_follow">
+                <a href="javascript:void(0);" onclick="follow(&#39;18474d67-c698-e611-845c-ac853d9f53ac&#39;);return false;">+加关注</a>
+    </div>
+</div>
+<div id="div_digg">
+    <div class="diggit" onclick="votePost(9593741,&#39;Digg&#39;)">
+        <span class="diggnum" id="digg_count">0</span>
+    </div>
+    <div class="buryit" onclick="votePost(9593741,&#39;Bury&#39;)">
+        <span class="burynum" id="bury_count">0</span>
+    </div>
+    <div class="clear"></div>
+    <div class="diggword" id="digg_tips">
+    </div>
+</div>
+
+<script type="text/javascript">
+    currentDiggType = 0;
+</script></div>
+    <div class="clear"></div>
+    <div id="post_next_prev">
+
+    <a href="https://www.cnblogs.com/libo0125ok/p/9590818.html" class="p_n_p_prefix">« </a> 上一篇：    <a href="https://www.cnblogs.com/libo0125ok/p/9590818.html" title="发布于 2018-09-05 10:53">canvas实现验证码功能</a>
+    <br>
+    <a href="https://www.cnblogs.com/libo0125ok/p/9935654.html" class="p_n_p_prefix">» </a> 下一篇：    <a href="https://www.cnblogs.com/libo0125ok/p/9935654.html" title="发布于 2018-11-09 16:06">树结构数据的展示和编辑-zTree树插件的简单使用</a>
+
+</div>
+</div>
+            </div>
+            <div class="postDesc">posted @ 
+<span id="post-date">2018-09-05 18:25</span>&nbsp;<a href="https://www.cnblogs.com/libo0125ok/">web喵神</a> 阅读(<span id="post_view_count">22947</span>) 评论(<span id="post_comment_count">0</span>) <a href="https://i.cnblogs.com/EditPosts.aspx?postid=9593741" rel="nofollow"> 编辑</a> <a href="javascript:void(0)" onclick="AddToWz(9593741); return false;">收藏</a>
+</div>
+        </div>
+	    
+	    
+    </div><!--end: topics 文章、评论容器-->
+</div>
+<script src="./VUE路由去除#问题 - web喵神 - 博客园_files/highlight.min.js.下载"></script>
+<script>markdown_highlight();</script>
+<script>
+    var allowComments = true, cb_blogId = 312812, cb_blogApp = 'libo0125ok', cb_blogUserGuid = '18474d67-c698-e611-845c-ac853d9f53ac';
+    var cb_entryId = 9593741, cb_entryCreatedDate = '2018-09-05 18:25', cb_postType = 1; 
+    loadViewCount(cb_entryId);
+</script><a name="!comments"></a>
+<div id="blog-comments-placeholder"></div>
+<script>
+    var commentManager = new blogCommentManager();
+    commentManager.renderComments(0);
+</script>
+
+<div id="comment_form" class="commentform">
+    <a name="commentform"></a>
+    <div id="divCommentShow"></div>
+    <div id="comment_nav"><span id="span_refresh_tips"></span><a href="javascript:void(0);" onclick="return RefreshCommentList();" id="lnk_RefreshComments" runat="server" clientidmode="Static">刷新评论</a><a href="https://www.cnblogs.com/libo0125ok/p/9593741.html#" onclick="return RefreshPage();">刷新页面</a><a href="https://www.cnblogs.com/libo0125ok/p/9593741.html#top">返回顶部</a></div>
+    <div id="comment_form_container"><div class="login_tips">
+    注册用户登录后才能发表评论，请 
+    <a rel="nofollow" href="javascript:void(0);" class="underline" onclick="return login(&#39;commentform&#39;);">登录</a>
+     或 
+    <a rel="nofollow" href="javascript:void(0);" class="underline" onclick="return register();">注册</a>，
+    <a href="https://www.cnblogs.com/">访问</a> 网站首页。
+</div></div>
+    <div class="ad_text_commentbox" id="ad_text_under_commentbox"></div>
+    <div id="ad_t2"><a href="http://www.ucancode.com/index.htm" target="_blank" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;Link&#39;, &#39;click&#39;, &#39;T2-工控&#39;)">【推荐】超50万行VC++源码: 大型组态工控、电力仿真CAD与GIS源码库</a><br><a href="https://www.jdcloud.com/cn/activity/year-end?utm_source=DMT_cnblogs&amp;utm_medium=CH&amp;utm_campaign=q4vm&amp;utm_term=Virtual-Machines" target="_blank" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;Link&#39;, &#39;click&#39;, &#39;T2-京东云&#39;)">【活动】京东云服务器_云主机低于1折，低价高性能产品备战双11</a><br><a href="https://www.ctyun.cn/activity/#/201910/ecs?hmsr=%E7%9C%8B%E7%9C%8B-%E5%8D%9A%E5%AE%A2%E5%9B%AD-10.16-10%E6%9C%88%E7%89%B9%E6%83%A0&amp;hmpl=&amp;hmcu=&amp;hmkw=&amp;hmci=?track=|cp:cz_blog|tgdy:46861|ttjh:shouyedingbuyoucefenlan|key:czkk12|pf:pc" target="_blank" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;Link&#39;, &#39;click&#39;, &#39;T2-天翼云&#39;)">【推荐】天翼云双十一提前开抢，1核1G云主机3个月仅需59元</a><br><a href="http://click.aliyun.com/m/1000081987/" target="_blank" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;Link&#39;, &#39;click&#39;, &#39;T2-阿里云&#39;)">【推荐】阿里云双11活动，热门产品低至一折等你来抢！</a><br><a href="https://www.getui.com/2019devfest?f=5&amp;p=10&amp;c=15&amp;ch=1&amp;hmsr=%E5%8D%9A%E5%AE%A2%E5%9B%AD&amp;hmpl=2019%E5%BC%80%E5%8F%91%E8%80%85%E8%8A%82&amp;hmcu=PC&amp;hmkw=&amp;hmci=" target="_blank">【福利】个推四大热门移动开发SDK全部免费用一年，限时抢！</a><br></div>
+    <div id="opt_under_post"></div>
+    <script async="async" src="./VUE路由去除#问题 - web喵神 - 博客园_files/gpt.js.下载"></script>
+    <script>
+        var googletag = googletag || {};
+        googletag.cmd = googletag.cmd || [];
+    </script>
+    <script>
+        googletag.cmd.push(function () {
+            googletag.defineSlot("/1090369/C1", [300, 250], "div-gpt-ad-1546353474406-0").addService(googletag.pubads());
+            googletag.defineSlot("/1090369/C2", [468, 60], "div-gpt-ad-1539008685004-0").addService(googletag.pubads());
+            googletag.pubads().enableSingleRequest();
+            googletag.enableServices();
+        });
+    </script>
+    <div id="cnblogs_c1" class="c_ad_block">
+        <div id="div-gpt-ad-1546353474406-0" style="height:250px; width:300px;" data-google-query-id="CMam-KSXyOUCFRSGlgod03MJ7w"><div id="google_ads_iframe_/1090369/C1_0__container__" style="border: 0pt none;"><iframe id="google_ads_iframe_/1090369/C1_0" title="3rd party ad content" name="google_ads_iframe_/1090369/C1_0" width="300" height="250" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" style="border: 0px; vertical-align: bottom;" data-google-container-id="1" data-load-complete="true" src="./VUE路由去除#问题 - web喵神 - 博客园_files/saved_resource.html"></iframe></div></div>
+    </div>
+    <div id="under_post_news"><div class="recomm-block"><b>相关博文：</b><br>·  <a title="Vue项目图片剪切上传——vue-cropper的使用" href="https://www.cnblogs.com/libo0125ok/p/9296011.html" target="_blank" onclick="clickRecomItmem(9296011)">Vue项目图片剪切上传——vue-cropper的使用</a><br>·  <a title="JavaScript前端和Java后端的AES加密和解密" href="https://www.cnblogs.com/libo0125ok/p/7668026.html" target="_blank" onclick="clickRecomItmem(7668026)">JavaScript前端和Java后端的AES加密和解密</a><br>·  <a title="使用jOrgChart插件实现组织架构图的展示" href="https://www.cnblogs.com/libo0125ok/p/6249752.html" target="_blank" onclick="clickRecomItmem(6249752)">使用jOrgChart插件实现组织架构图的展示</a><br>·  <a title="java-生成任意格式的json数据" href="https://www.cnblogs.com/libo0125ok/p/7905665.html" target="_blank" onclick="clickRecomItmem(7905665)">java-生成任意格式的json数据</a><br>·  <a title="vue-route+webpack部署单页路由项目，访问刷新出现404问题" href="https://www.cnblogs.com/kevingrace/p/6126762.html" target="_blank" onclick="clickRecomItmem(6126762)">vue-route+webpack部署单页路由项目，访问刷新出现404问题</a><br>»  <a target="_blank" href="https://recomm.cnblogs.com/r?postId=9593741&amp;index=1">更多推荐...</a></div></div>
+    <div id="cnblogs_c2" class="c_ad_block">
+        <div id="div-gpt-ad-1539008685004-0" style="height:60px; width:468px;" data-google-query-id="CMem-KSXyOUCFRSGlgod03MJ7w">
+            
+        <div id="google_ads_iframe_/1090369/C2_0__container__" style="border: 0pt none;"><iframe id="google_ads_iframe_/1090369/C2_0" title="3rd party ad content" name="google_ads_iframe_/1090369/C2_0" width="468" height="60" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" style="border: 0px; vertical-align: bottom;" data-google-container-id="2" data-load-complete="true" src="./VUE路由去除#问题 - web喵神 - 博客园_files/saved_resource(1).html"></iframe></div></div>
+    </div>
+    <div id="under_post_kb">
+<div class="itnews c_ad_block">
+    <b>最新 IT 新闻</b>:
+    <br>
+ ·              <a href="https://news.cnblogs.com/n/645968/" target="_blank">联想成立35周年，杨元庆发内部邮件：年收入已超过3500亿</a>
+            <br>
+ ·              <a href="https://news.cnblogs.com/n/645967/" target="_blank">中国开启5G时代 外媒：用户量数周内将超美国韩国</a>
+            <br>
+ ·              <a href="https://news.cnblogs.com/n/645966/" target="_blank">Cell新观点：只存在于复杂人类细胞中的特殊遗传信息</a>
+            <br>
+ ·              <a href="https://news.cnblogs.com/n/645965/" target="_blank">支付宝“自降身段”</a>
+            <br>
+ ·              <a href="https://news.cnblogs.com/n/645955/" target="_blank">PTC 4.7亿美元并购Onshape，布局工业软件云化时代！</a>
+            <br>
+    » <a href="https://news.cnblogs.com/" title="IT 新闻" target="_blank">更多新闻...</a>
+</div></div>
+    <div id="HistoryToday" class="c_ad_block">
+<b>历史上的今天：</b>
+<br>
+
+2018-09-05    <a href="https://www.cnblogs.com/libo0125ok/p/9590818.html">canvas实现验证码功能</a>
+    <br>
+</div>
+    <script type="text/javascript">
+        fixPostBody();
+        setTimeout(function () { incrementViewCount(cb_entryId); }, 50);
+        deliverAdT2();
+        deliverAdC1();
+        deliverAdC2();
+        loadNewsAndKb();
+        loadBlogSignature();
+LoadPostCategoriesTags(cb_blogId, cb_entryId);        LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
+        GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate, cb_postType);
+        loadOptUnderPost();
+        GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);
+    </script>
+</div>
+	</div><!--end: forFlow -->
+	</div><!--end: mainContent 主体内容容器-->
+
+	<div id="sideBar">
+		<div id="sideBarMain">
+			
+<div id="sidebar_news" class="newsItem"><!--done-->
+<h3 class="catListTitle">公告</h3>
+
+<div id="blog-news">
+    <div>访问人数：<img border="0" style="height: 18px; vertical-align: top" src="./VUE路由去除#问题 - web喵神 - 博客园_files/counter.php" alt="UV" title="访问人数"></div>
+<div style="margin-top: 5px">总访问量：<img border="0" style="height: 18px; vertical-align: top" src="./VUE路由去除#问题 - web喵神 - 博客园_files/counter(1).php" alt="PV" title="总访问量"></div>
+    <div id="profile_block">
+        昵称：
+        <a href="https://home.cnblogs.com/u/libo0125ok/">
+            web喵神
+        </a>
+        <br>
+        园龄：
+        <a href="https://home.cnblogs.com/u/libo0125ok/" title="入园时间：2016-10-23">
+            3年
+        </a>
+        <br>
+        粉丝：
+        <a href="https://home.cnblogs.com/u/libo0125ok/followers/">
+            64
+        </a>
+        <br>
+        关注：
+        <a href="https://home.cnblogs.com/u/libo0125ok/followees/">
+            11
+        </a>
+        <div id="p_b_follow">
+<a href="javascript:void(0)" onclick="follow(&#39;18474d67-c698-e611-845c-ac853d9f53ac&#39;)">+加关注</a></div>
+        <script>getFollowStatus('18474d67-c698-e611-845c-ac853d9f53ac');</script>
+    </div>
+</div>
+
+</div>
+
+			<div id="blog-calendar" style="">
+
+<table id="blogCalendar" class="Cal" cellspacing="0" cellpadding="0" title="Calendar" border="0">
+    <tbody>
+        <tr>
+            <td colspan="7">
+                <table class="CalTitle" cellspacing="0" border="0">
+                    <tbody>
+                        <tr>
+                            <td class="CalNextPrev">
+                                <a href="javascript:void(0);" onclick="loadBlogCalendar(&#39;2019/10/01&#39;); return false;">&lt;</a>
+                            </td>
+                            <td align="center">2019年11月</td>
+                            <td align="right" class="CalNextPrev">
+                                <a href="javascript:void(0);" onclick="loadBlogCalendar(&#39;2019/12/01&#39;); return false;">&gt;</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+                    <th class="CalDayHeader" align="center" abbr="日" scope="col">日</th>
+                    <th class="CalDayHeader" align="center" abbr="一" scope="col">一</th>
+                    <th class="CalDayHeader" align="center" abbr="二" scope="col">二</th>
+                    <th class="CalDayHeader" align="center" abbr="三" scope="col">三</th>
+                    <th class="CalDayHeader" align="center" abbr="四" scope="col">四</th>
+                    <th class="CalDayHeader" align="center" abbr="五" scope="col">五</th>
+                    <th class="CalDayHeader" align="center" abbr="六" scope="col">六</th>
+        </tr>
+            <tr>
+                            <td class="CalOtherMonthDay" align="center">27</td>
+                            <td class="CalOtherMonthDay" align="center">28</td>
+                            <td class="CalOtherMonthDay" align="center">29</td>
+                            <td class="CalOtherMonthDay" align="center">30</td>
+                            <td class="CalOtherMonthDay" align="center">31</td>
+                        <td class="CalTodayDay" align="center">
+                            1
+                        </td>
+                    <td class="CalWeekendDay" align="center">
+                        2
+                    </td>
+            </tr>
+                <tr>
+                        <td class="CalWeekendDay" align="center">
+                            3
+                        </td>
+                            <td class="" align="center">
+                                4
+                            </td>
+                            <td class="" align="center">
+                                5
+                            </td>
+                            <td class="" align="center">
+                                6
+                            </td>
+                            <td class="" align="center">
+                                7
+                            </td>
+                            <td class="" align="center">
+                                8
+                            </td>
+                        <td class="CalWeekendDay" align="center">
+                            9
+                        </td>
+                </tr>
+                <tr>
+                        <td class="CalWeekendDay" align="center">
+                            10
+                        </td>
+                            <td class="" align="center">
+                                11
+                            </td>
+                            <td class="" align="center">
+                                12
+                            </td>
+                            <td class="" align="center">
+                                13
+                            </td>
+                            <td class="" align="center">
+                                14
+                            </td>
+                            <td class="" align="center">
+                                15
+                            </td>
+                        <td class="CalWeekendDay" align="center">
+                            16
+                        </td>
+                </tr>
+                <tr>
+                        <td class="CalWeekendDay" align="center">
+                            17
+                        </td>
+                            <td class="" align="center">
+                                18
+                            </td>
+                            <td class="" align="center">
+                                19
+                            </td>
+                            <td class="" align="center">
+                                20
+                            </td>
+                            <td class="" align="center">
+                                21
+                            </td>
+                            <td class="" align="center">
+                                22
+                            </td>
+                        <td class="CalWeekendDay" align="center">
+                            23
+                        </td>
+                </tr>
+                <tr>
+                        <td class="CalWeekendDay" align="center">
+                            24
+                        </td>
+                            <td class="" align="center">
+                                25
+                            </td>
+                            <td class="" align="center">
+                                26
+                            </td>
+                            <td class="" align="center">
+                                27
+                            </td>
+                            <td class="" align="center">
+                                28
+                            </td>
+                            <td class="" align="center">
+                                29
+                            </td>
+                        <td class="CalWeekendDay" align="center">
+                            30
+                        </td>
+                </tr>
+                <tr>
+                        <td class="CalOtherMonthDay" align="center">
+                            1
+                        </td>
+                            <td class="CalOtherMonthDay" align="center">
+                                2
+                            </td>
+                            <td class="CalOtherMonthDay" align="center">
+                                3
+                            </td>
+                            <td class="CalOtherMonthDay" align="center">
+                                4
+                            </td>
+                            <td class="CalOtherMonthDay" align="center">
+                                5
+                            </td>
+                            <td class="CalOtherMonthDay" align="center">
+                                6
+                            </td>
+                        <td class="CalOtherMonthDay" align="center">
+                            7
+                        </td>
+                </tr>
+    </tbody>
+</table></div><script>loadBlogDefaultCalendar();</script>
+			
+			<div id="leftcontentcontainer">
+				<div id="blog-sidecolumn">
+<!-- 搜索 -->
+<div id="sidebar_search" class="sidebar-block">
+    <div id="sidebar_search" class="mySearch">
+        <h3 class="catListTitle">搜索</h3>
+        <div id="sidebar_search_box">
+            <div id="widget_my_zzk" class="div_my_zzk">
+                <input type="text" id="q" onkeydown="return zzk_go_enter(event);" class="input_my_zzk">&nbsp;<input onclick="zzk_go()" type="button" value="找找看" id="btnZzk" class="btn_my_zzk">
+            </div>
+            <div id="widget_my_google" class="div_my_zzk">
+                <input type="text" name="google_q" id="google_q" onkeydown="return google_go_enter(event);" class="input_my_zzk">&nbsp;<input onclick="google_go()" type="button" value="谷歌搜索" class="btn_my_zzk">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 常用链接 -->
+<div id="sidebar_shortcut" class="sidebar-block">
+    <div class="catListLink">
+<h3 class="catListTitle">
+常用链接
+</h3>
+<ul>
+		<li>
+
+<a href="https://www.cnblogs.com/libo0125ok/p/" title="我的博客的随笔列表">我的随笔</a>
+</li>
+		<li>
+
+<a href="https://www.cnblogs.com/libo0125ok/MyComments.html" title="我的发表过的评论列表">我的评论</a>
+</li>
+		<li>
+
+<a href="https://www.cnblogs.com/libo0125ok/OtherPosts.html" title="我评论过的随笔列表">我的参与</a>
+</li>
+		<li>
+
+<a href="https://www.cnblogs.com/libo0125ok/RecentComments.html" title="我的博客的评论列表">最新评论</a>
+</li>
+		<li>
+
+<a href="https://www.cnblogs.com/libo0125ok/tag/" title="我的博客的标签列表">我的标签</a>
+</li>
+
+</ul>
+<div id="itemListLin_con" style="display:none;">
+<ul>
+
+</ul>
+</div>
+</div>
+
+
+</div>
+
+<!-- 最新随笔 -->
+
+
+
+<!-- 我的标签 -->
+<div id="sidebar_toptags" class="sidebar-block">
+    <div class="catListTag">
+<h3 class="catListTitle">我的标签</h3>
+<ul>
+
+        <li>
+            <a href="https://www.cnblogs.com/libo0125ok/tag/web%E5%89%8D%E7%AB%AF/">web前端</a>(46)
+        </li>
+        <li>
+            <a href="https://www.cnblogs.com/libo0125ok/tag/JavaScript/">JavaScript</a>(38)
+        </li>
+        <li>
+            <a href="https://www.cnblogs.com/libo0125ok/tag/%E6%8F%92%E4%BB%B6/">插件</a>(20)
+        </li>
+        <li>
+            <a href="https://www.cnblogs.com/libo0125ok/tag/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BC%80%E5%8F%91/">移动端开发</a>(8)
+        </li>
+        <li>
+            <a href="https://www.cnblogs.com/libo0125ok/tag/Vue/">Vue</a>(6)
+        </li>
+        <li>
+            <a href="https://www.cnblogs.com/libo0125ok/tag/java/">java</a>(6)
+        </li>
+        <li>
+            <a href="https://www.cnblogs.com/libo0125ok/tag/node.js/">node.js</a>(3)
+        </li>
+        <li>
+            <a href="https://www.cnblogs.com/libo0125ok/tag/AnguarJS/">AnguarJS</a>(3)
+        </li>
+        <li>
+            <a href="https://www.cnblogs.com/libo0125ok/tag/git/">git</a>(2)
+        </li>
+        <li>
+            <a href="https://www.cnblogs.com/libo0125ok/tag/mac/">mac</a>(2)
+        </li>
+            <li>
+                <a href="https://www.cnblogs.com/libo0125ok/tag/">更多</a>
+            </li>
+
+</ul>
+</div>
+
+
+</div>
+
+<!-- 积分与排名 -->
+
+
+<!-- 随笔分类、随笔档案、文章分类、新闻分类、相册、链接 -->
+<div id="sidebar_categories">
+    
+        <div id="sidebar_postarchive" class="catListPostArchive sidebar-block">
+            <h3 class="catListTitle">
+                
+
+随笔档案
+<span style="font-size:11px;font-weight:normal">(53)</span>
+
+
+            </h3>
+
+
+            <ul>
+
+                        <li>
+                            
+<a href="https://www.cnblogs.com/libo0125ok/archive/2019/10.html" rel="" target="">
+    2019年10月(1)
+</a>
+ 
+
+                        </li>
+                        <li>
+                            
+<a href="https://www.cnblogs.com/libo0125ok/archive/2019/09.html" rel="" target="">
+    2019年9月(1)
+</a>
+ 
+
+                        </li>
+                        <li>
+                            
+<a href="https://www.cnblogs.com/libo0125ok/archive/2019/08.html" rel="" target="">
+    2019年8月(1)
+</a>
+ 
+
+                        </li>
+                        <li>
+                            
+<a href="https://www.cnblogs.com/libo0125ok/archive/2019/05.html" rel="" target="">
+    2019年5月(1)
+</a>
+ 
+
+                        </li>
+                        <li>
+                            
+<a href="https://www.cnblogs.com/libo0125ok/archive/2019/01.html" rel="" target="">
+    2019年1月(1)
+</a>
+ 
+
+                        </li>
+                        <li>
+                            
+<a href="https://www.cnblogs.com/libo0125ok/archive/2018/11.html" rel="" target="">
+    2018年11月(1)
+</a>
+ 
+
+                        </li>
+                        <li>
+                            
+<a href="https://www.cnblogs.com/libo0125ok/archive/2018/09.html" rel="" target="">
+    2018年9月(2)
+</a>
+ 
+
+                        </li>
+                        <li>
+                            
+<a href="https://www.cnblogs.com/libo0125ok/archive/2018/07.html" rel="" target="">
+    2018年7月(2)
+</a>
+ 
+
+                        </li>
+                        <li>
+                            
+<a href="https://www.cnblogs.com/libo0125ok/archive/2018/06.html" rel="" target="">
+    2018年6月(1)
+</a>
+ 
+
+                        </li>
+                        <li>
+                            
+<a href="https://www.cnblogs.com/libo0125ok/archive/2018/05.html" rel="" target="">
+    2018年5月(2)
+</a>
+ 
+
+                        </li>
+                        <li>
+                            
+<a href="https://www.cnblogs.com/libo0125ok/archive/2018/02.html" rel="" target="">
+    2018年2月(2)
+</a>
+ 
+
+                        </li>
+                        <li>
+                            
+<a href="https://www.cnblogs.com/libo0125ok/archive/2018/01.html" rel="" target="">
+    2018年1月(2)
+</a>
+ 
+
+                        </li>
+                        <li>
+                            
+<a href="https://www.cnblogs.com/libo0125ok/archive/2017/12.html" rel="" target="">
+    2017年12月(8)
+</a>
+ 
+
+                        </li>
+                        <li>
+                            
+<a href="https://www.cnblogs.com/libo0125ok/archive/2017/11.html" rel="" target="">
+    2017年11月(6)
+</a>
+ 
+
+                        </li>
+                        <li>
+                            
+<a href="https://www.cnblogs.com/libo0125ok/archive/2017/10.html" rel="" target="">
+    2017年10月(2)
+</a>
+ 
+
+                        </li>
+                        <li>
+                            
+<a href="https://www.cnblogs.com/libo0125ok/archive/2017/09.html" rel="" target="">
+    2017年9月(1)
+</a>
+ 
+
+                        </li>
+                        <li>
+                            
+<a href="https://www.cnblogs.com/libo0125ok/archive/2017/08.html" rel="" target="">
+    2017年8月(1)
+</a>
+ 
+
+                        </li>
+                        <li>
+                            
+<a href="https://www.cnblogs.com/libo0125ok/archive/2017/07.html" rel="" target="">
+    2017年7月(1)
+</a>
+ 
+
+                        </li>
+                        <li>
+                            
+<a href="https://www.cnblogs.com/libo0125ok/archive/2017/06.html" rel="" target="">
+    2017年6月(3)
+</a>
+ 
+
+                        </li>
+                        <li>
+                            
+<a href="https://www.cnblogs.com/libo0125ok/archive/2017/04.html" rel="" target="">
+    2017年4月(2)
+</a>
+ 
+
+                        </li>
+                        <li>
+                            
+<a href="https://www.cnblogs.com/libo0125ok/archive/2017/02.html" rel="" target="">
+    2017年2月(2)
+</a>
+ 
+
+                        </li>
+                        <li>
+                            
+<a href="https://www.cnblogs.com/libo0125ok/archive/2017/01.html" rel="" target="">
+    2017年1月(2)
+</a>
+ 
+
+                        </li>
+                        <li>
+                            
+<a href="https://www.cnblogs.com/libo0125ok/archive/2016/12.html" rel="" target="">
+    2016年12月(1)
+</a>
+ 
+
+                        </li>
+                        <li>
+                            
+<a href="https://www.cnblogs.com/libo0125ok/archive/2016/11.html" rel="" target="">
+    2016年11月(3)
+</a>
+ 
+
+                        </li>
+                        <li>
+                            
+<a href="https://www.cnblogs.com/libo0125ok/archive/2016/10.html" rel="" target="">
+    2016年10月(4)
+</a>
+ 
+
+                        </li>
+
+            </ul>
+
+
+        </div>
+
+</div>
+
+<!-- 最新评论 -->
+<div id="sidebar_recentcomments" class="sidebar-block">
+    <div class="catListComment">
+<h3 class="catListTitle">最新评论</h3>
+
+	<div class="RecentCommentBlock">
+        <ul>
+                    <li class="recent_comment_title"><a href="https://www.cnblogs.com/libo0125ok/p/9101118.html#4382123">1. Re:VUE滚动条插件——vue-happy-scroll</a></li>
+                    <li class="recent_comment_body">@ CatherLee哈哈，这不是我写的插件，也是我在网上找的。...</li>
+                    <li class="recent_comment_author">--web喵神</li>
+                    <li class="recent_comment_title"><a href="https://www.cnblogs.com/libo0125ok/p/9101118.html#4382078">2. Re:VUE滚动条插件——vue-happy-scroll</a></li>
+                    <li class="recent_comment_body">IE10不行呢</li>
+                    <li class="recent_comment_author">--CatherLee</li>
+                    <li class="recent_comment_title"><a href="https://www.cnblogs.com/libo0125ok/p/8127049.html#4302420">3. Re:前后端分离ueditor富文本编辑器的使用-Java版本</a></li>
+                    <li class="recent_comment_body">您好，我也是做前端的，现在也有差不多的需求，请问能发一份源码给我学习一下嘛？感激不尽~1414945011@qq.com我的邮箱。非常感谢</li>
+                    <li class="recent_comment_author">--jennydtt</li>
+                    <li class="recent_comment_title"><a href="https://www.cnblogs.com/libo0125ok/p/7098349.html#4298219">4. Re:H5端js实现图片放大滑动查看-插件photoswipe的使用</a></li>
+                    <li class="recent_comment_body">Vue里面使用为啥不行呢</li>
+                    <li class="recent_comment_author">--whmEmma</li>
+                    <li class="recent_comment_title"><a href="https://www.cnblogs.com/libo0125ok/p/9296011.html#4286221">5. Re:Vue项目图片剪切上传——vue-cropper的使用</a></li>
+                    <li class="recent_comment_body">@ 仙人掌的成长把 import VueCropper from "vue-cropper"; 换成 import { VueCropper } from "vue-cropper";...</li>
+                    <li class="recent_comment_author">--一名小小程序员</li>
+        </ul>
+    </div>
+</div>
+
+
+</div>
+
+
+
+<!-- 阅读排行榜 -->
+<div id="sidebar_topviewedposts" class="sidebar-block">
+    <div class="catListView">
+<h3 class="catListTitle">阅读排行榜</h3>
+	<div id="TopViewPostsBlock">
+        <ul style="word-break:break-all">
+                    <li>
+                        <a href="https://www.cnblogs.com/libo0125ok/p/7668026.html">
+                            1. JavaScript前端和Java后端的AES加密和解密(43620)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/libo0125ok/p/8127049.html">
+                            2. 前后端分离ueditor富文本编辑器的使用-Java版本(28545)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/libo0125ok/p/7905665.html">
+                            3. java-生成任意格式的json数据(24338)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/libo0125ok/p/6249752.html">
+                            4. js前端使用jOrgChart插件实现组织架构图的展示(23660)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/libo0125ok/p/9296011.html">
+                            5. Vue项目图片剪切上传——vue-cropper的使用(23099)
+                        </a>
+                    </li>
+        </ul>
+    </div>
+</div>
+
+
+</div>
+
+<!-- 评论排行榜 -->
+<div id="sidebar_topcommentedposts" class="sidebar-block">
+    <div class="catListFeedback">
+<h3 class="catListTitle">评论排行榜</h3>
+	<div id="TopFeedbackPostsBlock">
+        <ul style="word-break:break-all">
+                    <li>
+                        <a href="https://www.cnblogs.com/libo0125ok/p/8127049.html">
+                            1. 前后端分离ueditor富文本编辑器的使用-Java版本(34)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/libo0125ok/p/7668026.html">
+                            2. JavaScript前端和Java后端的AES加密和解密(27)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/libo0125ok/p/6249752.html">
+                            3. js前端使用jOrgChart插件实现组织架构图的展示(11)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/libo0125ok/p/7098349.html">
+                            4. H5端js实现图片放大滑动查看-插件photoswipe的使用(7)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/libo0125ok/p/7810290.html">
+                            5. 原生js实现简单移动端轮播图(7)
+                        </a>
+                    </li>
+        </ul>
+    </div>
+</div>
+
+
+</div>
+
+<!-- 推荐排行榜 -->
+<div id="sidebar_topdiggedposts" class="sidebar-block">
+    
+<div id="topdigg_posts_wrap">
+    <div class="catListView">
+        <h3 class="catListTitle">推荐排行榜</h3>
+        <div id="TopDiggPostsBlock">
+            <ul style="word-break: break-all">
+                        <li>
+                            <a href="https://www.cnblogs.com/libo0125ok/p/7668026.html">
+                                1. JavaScript前端和Java后端的AES加密和解密(7)
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.cnblogs.com/libo0125ok/p/7098349.html">
+                                2. H5端js实现图片放大滑动查看-插件photoswipe的使用(5)
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.cnblogs.com/libo0125ok/p/8127049.html">
+                                3. 前后端分离ueditor富文本编辑器的使用-Java版本(4)
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.cnblogs.com/libo0125ok/p/8422617.html">
+                                4. img标签实现和背景图一样的显示效果——object-fit和object-position(4)
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.cnblogs.com/libo0125ok/p/6249752.html">
+                                5. js前端使用jOrgChart插件实现组织架构图的展示(3)
+                            </a>
+                        </li>
+            </ul>
+        </div>
+    </div>
+</div>
+</div></div>
+                    <script>loadBlogSideColumn();</script>
+			</div>
+			
+		</div><!--end: sideBarMain -->
+	</div><!--end: sideBar 侧边栏容器 -->
+	<div class="clear"></div>
+	</div><!--end: main -->
+	<div class="clear"></div>
+	<div id="footer">
+		<!--done-->
+Copyright © 2019 web喵神
+<br><span id="poweredby">Powered by .NET Core 3.0.0 on Linux</span>
+
+
+
+	</div><!--end: footer -->
+</div><!--end: home 自定义的最大容器 -->
+
+
+    
+
+
+<iframe id="blockbyte-bs-sidebar" class="notranslate" data-pos="left" src="./VUE路由去除#问题 - web喵神 - 博客园_files/saved_resource(2).html"></iframe><div id="blockbyte-bs-indicator" class="blockbyte-bs-fullHeight blockbyte-bs-visible" data-pos="left" style="width: 1px; height: 100%; top: 0%;"><div><span></span></div></div></body></html>

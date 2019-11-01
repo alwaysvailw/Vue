@@ -1,9 +1,6 @@
 <template>
-  <div class="footer">
-    <p>
-      {{mark}}
-      <el-link :underline="false" icon="el-icon-edit" type="info" href="https://blog.dev4wei.cn" target="_blank">wei</el-link>
-      </p>
+  <div class="the-footer">
+    <p>{{mark}}</p>
   </div>
 </template>
 
@@ -11,7 +8,7 @@
 export default {
   data() {
     return {
-      mark: 'Copyright 2019 by ',
+      mark: 'Copyright 2019 by wei',
     };
   },
   methods: {
@@ -19,7 +16,6 @@ export default {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 /* Copyright字体和颜色 */
 p {
