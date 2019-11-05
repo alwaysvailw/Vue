@@ -4,3 +4,5 @@
 1. Add 风格指南.md
 
 1. Add vue-router
+
+1. Add Logo

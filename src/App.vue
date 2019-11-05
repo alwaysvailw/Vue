@@ -46,9 +46,11 @@ body {
   width: 100%;
   height: 60px;
 }
+/* el-scrollbar高度(设置后el-scrollbar即可应用成功) */
 .scrollbar {
   height: 100%;
 }
+/* 去除横向的空滚动条 */
 .el-scrollbar__wrap {
   overflow-x: hidden !important
 }
