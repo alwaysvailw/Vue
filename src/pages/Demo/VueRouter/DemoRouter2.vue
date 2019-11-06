@@ -1,15 +1,15 @@
 <template>
   <div>
-    <h1>Home</h1>
+    <h1>Router2</h1>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'home'
+  name: 'demo-router-2'
 }
 </script>
 
-<style>
+<style scoped>
 
-</style>
+</style>>

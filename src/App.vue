@@ -6,7 +6,10 @@
     <div class="contentWrapper">
       <!-- 路由匹配到的组件将渲染在这里 -->
       <el-scrollbar class="scrollbar">
-        <router-view></router-view>        
+        <!-- 路由过渡动效 -->
+        <transition name="fade" mode="out-in">
+          <router-view></router-view>  
+        </transition>
       </el-scrollbar>
     </div>
   </div>
@@ -60,5 +63,11 @@ body {
 }
 .content {
   height: 100%;
+}
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s ease;
+}
+.fade-enter, .fade-leave-active {
+  opacity: 0;
 }
 </style>

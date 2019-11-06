@@ -1,7 +1,5 @@
 <template>
-  <el-menu-item>
-    <a class="link" :href="link.path" target="_blank">{{link.name}}</a>
-  </el-menu-item>
+  <a class="link" :href="link.path" target="_blank">{{link.name}}</a>
 </template>
 
 <script>
@@ -12,9 +10,18 @@ export default {
 }
 </script>
 
-<style>
+<style scope>
 .link {
   text-decoration: none;
   font-weight: bold;
+  display: inline-block;
+  height: 60px;
+  line-height: 60px;
+  padding: 0 20px;
+  color: #909399;
+  transition: all 0.3s
+}
+.link:hover {
+  color: #303133
 }
 </style>

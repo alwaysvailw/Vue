@@ -19,7 +19,6 @@
       </div>
     </div>
     
-    
     <div class="nav">
       <el-menu 
         :default-active="activeTab" 
@@ -32,7 +31,7 @@
         <el-menu-item index="/">主页</el-menu-item>
         <el-submenu index="/demo">
           <template slot="title">例子</template>
-          <el-menu-item index="/demo-1">Demo1</el-menu-item>
+          <el-menu-item index="/demo-vue-router">Vue Router</el-menu-item>
           <el-menu-item index="/demo-2">Demo2</el-menu-item>
           <el-menu-item index="/demo-3">Demo3</el-menu-item>
         </el-submenu>
@@ -59,8 +58,14 @@ export default {
   watch: {
     //监听路由变化切换tab页
     $route(now) {
-      this.activeTab = now.path
-    }
+      this.activeTab = now.path;
+    },
+    beforeRouteUpdate (to, from, next) {
+      const toDepth = to.path.split('/').length
+      const fromDepth = from.path.split('/').length
+      this.transitionName = toDepth < fromDepth ? 'slide-right' : 'slide-left'
+      next()
+    },
   },
   data() {
     return {
@@ -74,7 +79,7 @@ export default {
   },
   methods: {
     clickLogo: function () { // 点击Logo
-      location.reload();
+      window.location.href = window.location.origin
     },
     handleSelect(key, keyPath) { // el-menu的选择事件
       window.console.log(key, keyPath);

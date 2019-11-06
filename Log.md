@@ -6,3 +6,5 @@
 1. Add vue-router
 
 1. Add Logo
+
+1. Add vue-router 过渡动效
