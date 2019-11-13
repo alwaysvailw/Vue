@@ -29,6 +29,7 @@
         router
       >
         <el-menu-item index="/">主页</el-menu-item>
+        <el-menu-item index="/book">书单</el-menu-item>
         <el-submenu index="/demo">
           <template slot="title">例子</template>
           <el-menu-item index="/demo-vue-router">Vue Router</el-menu-item>
@@ -106,7 +107,7 @@ export default {
   height: 2px;
   width: 0;
   content: " ";
-  transition: all 0.5s;
+  transition: all 1s;
   background: rgba(0, 117, 172, 0.2);
 }
 .container:hover::after {
@@ -119,7 +120,7 @@ export default {
   line-height: 60px;
   font-weight: 900;
   font-size: 60px;
-  transition: all 0.5s;
+  transition: all 1s;
 }
 /* logo初始化动画 */
 .custom-appear-active-class {
@@ -127,7 +128,7 @@ export default {
 }
 /* logo hover动画 */
 #logo:hover {
-  transition: all 0.5s;
+  transition: all 1s;
   cursor: pointer;
   transform: scale(1.21)
 }

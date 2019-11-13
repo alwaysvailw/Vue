@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 
 import Home from '../pages/Home'
+import Book from '../pages/Book'
 import NotFound from '../pages/NotFound'
 import DemoVueRouter from '../pages/Demo/VueRouter/DemoVueRouter'
 import DemoRouterHome from '../pages/Demo/VueRouter/DemoRouterHome.vue'
@@ -16,6 +17,7 @@ export default new VueRouter({
   mode: 'history',
   routes: [
     { path: '/', name: 'home', component: Home},
+    { path: '/book', name: 'book', component: Book},
     { path: '/demo-vue-router', name: 'demo-vue-router', component: DemoVueRouter, 
       children: [
         { path: '', component: DemoRouterHome },
